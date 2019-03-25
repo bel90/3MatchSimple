@@ -16,6 +16,7 @@ public class GameData : MonoBehaviour {
 
     public static GameData gameData;
     public SaveData saveData;
+    public bool wasStarted = false; //Damit wenn aus Spiel zurückgesprungen wird, nicht jedesmal der Startbildschirm wieder aufgerufen wird
 
     void Awake() {
         if (gameData == null) {
@@ -64,10 +65,5 @@ public class GameData : MonoBehaviour {
 
     private void OnDisable() {
         Save();
-    }
-
-    // Update is called once per frame
-    void Update() {
-        
     }
 }

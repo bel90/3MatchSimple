@@ -1,28 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStartManager : MonoBehaviour {
 
     public GameObject startPanel;
     public GameObject levelPanel;
+    public GameData gameData;
 
     void Start() {
-        startPanel.SetActive(true);
-        levelPanel.SetActive(false);
+        gameData = FindObjectOfType<GameData>();
+        if (!gameData.wasStarted) {
+            startPanel.SetActive(true);
+            levelPanel.SetActive(false);
+        } else {
+            startPanel.SetActive(false);
+            levelPanel.SetActive(true);
+        }
     }
 
     public void PlayGame() {
         startPanel.SetActive(false);
         levelPanel.SetActive(true);
+        gameData.wasStarted = true;
+        Debug.Log("play game");
     }
 
     public void Home() {
         startPanel.SetActive(true);
         levelPanel.SetActive(false);
-    }
-    
-    void Update() {
-        
+        Debug.Log("go home");
     }
 }
