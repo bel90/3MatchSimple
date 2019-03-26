@@ -24,6 +24,13 @@ TagManager:
   - Lock
   - Concrete
   - Chocolate
+  - Dot1
+  - Dot2
+  - Dot3
+  - Dot4
+  - Dot5
+  - Dot6
+  - Dot7
   layers:
   - Default
   - TransparentFX

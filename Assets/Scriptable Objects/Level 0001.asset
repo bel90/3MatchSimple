@@ -16,10 +16,10 @@ MonoBehaviour:
   height: 7
   boardLayout: []
   dots:
-  - {fileID: 4318539396026108605, guid: e5c16ab0f9cf8614283c6b4316c52ed2, type: 3}
-  - {fileID: 3205855819147834440, guid: b51929afba6b0a245aef3fca3edb2d34, type: 3}
-  - {fileID: 9146268663471495245, guid: 968dcf07d9c1a8946a2f0d37de681f66, type: 3}
-  - {fileID: 4345244180996939869, guid: b9cbf552feadd4c479b51b9db862d4ed, type: 3}
+  - {fileID: 5186533117079780187, guid: 83c74e9d98fdbe44e9347bb89d64bafb, type: 3}
+  - {fileID: 1215296188575276847, guid: aa5d9b9c9bebb8a4394535fb47f1ec8b, type: 3}
+  - {fileID: 4047732124111660485, guid: 1b01212946df69d45875c1f4eaeac970, type: 3}
+  - {fileID: 997469079436097760, guid: c6f82f4cd50a52348b687946aa799536, type: 3}
   scoreGoals: 64000000c800000058020000
   endGameRequirements:
     gameType: 0
@@ -27,5 +27,5 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 10
     numberCollected: 0
-    goalSprite: {fileID: 21300004, guid: a18cd49daa2fcac4fafce518553e1fce, type: 3}
-    matchValue: Dot_Green
+    goalSprite: {fileID: 21300000, guid: 72def2818db21584d855453eb8bb4ac4, type: 3}
+    matchValue: Dot1

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Dot : MonoBehaviour {
 
+    [Header("Effects-")]
+    public GameObject destroyEffect;
+
     [Header("Board Variables")]
     public int column;
     public int row;
@@ -14,7 +17,7 @@ public class Dot : MonoBehaviour {
 
     public GameObject otherDot;
 
-    private Animator anim;
+    //private Animator anim; //Animator kann später wieder hinzugefügt werden
     private float shineDelay;
     private float shineDelaySeconds;
     private EndGameManager endGameManager;
@@ -55,14 +58,7 @@ public class Dot : MonoBehaviour {
         endGameManager = FindObjectOfType<EndGameManager>();
         findMatches = FindObjectOfType<FindMatches>();
         hintManager = FindObjectOfType<HintManager>();
-        anim = GetComponent<Animator>();
-        //targetX = (int)transform.position.x;
-        //targetY = (int)transform.position.y;
-
-        //row = targetY;
-        //column = targetX;
-        //previousRow = row;
-        //previousColumn = column;
+        //anim = GetComponent<Animator>();
     }
 
     //This is for testing and debug only
@@ -125,13 +121,14 @@ public class Dot : MonoBehaviour {
     }
 
     IEnumerator StartShineCo() {
-        anim.SetBool("Shine", true);
+        //anim.SetBool("Shine", true);
         yield return null; //Hier wird ein Frame gewartet
-        anim.SetBool("Shine", false);
+        //anim.SetBool("Shine", false);
     }
 
     public void PopAnimation() {
-        anim.SetBool("Popped", true);
+        //anim.SetBool("Popped", true);
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
     }
 
     public IEnumerator CheckMoveCo() {
